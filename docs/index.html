@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" media="all">
 
 </head>
+
 <body>
 
 <div class="top-area">
@@ -126,6 +127,26 @@
     
 </div>
 </div><!--End Slider Section-->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Vendor scripts -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/glightbox.min.js"></script>
+<script src="assets/vendor/owl/owl.carousel.min.js"></script>
+
+<!-- PogoSlider -->
+<script src="assets/js/pogo-slider.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+  $(document).ready(function () {
+    $('.pogoSlider').pogoSlider({
+      autoplay: false
+    }).data('plugin_pogoSlider');
+  });
+</script>
+
   
 </div> 
 
