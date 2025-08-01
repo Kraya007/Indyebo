@@ -96,7 +96,7 @@
         autoplayTimeout: 40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
         autoplay: false,
         baseZindex: 1,
-        displayProgess: true,
+        displayProgess: false,
         onSlideStart: null,
         onSlideEnd: null,
         onSliderPause: null,
@@ -107,15 +107,15 @@
         elementTransitionDuration: 1000,
         elementTransitionIn: 'slideUp',
         elementTransitionOut: 'slideDown',
-        generateButtons: true,
+        generateButtons: false,
         buttonPosition: 'CenterHorizontal',
-        generateNav: true,
+        generateNav: false,
         navPosition: 'Bottom',
         preserveTargetSize: false,
         targetWidth: 1000,
         targetHeight: 300,
         responsive: false,
-        pauseOnHover: true
+        pauseOnHover: false
     };
 
     function Plugin(element, options) {
