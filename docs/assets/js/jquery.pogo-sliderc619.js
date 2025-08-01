@@ -93,7 +93,7 @@
     var pluginName = 'pogoSlider';
 
     var defaults = {
-        autoplayTimeout: 4000,
+        autoplayTimeout: 40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
         autoplay: false,
         baseZindex: 1,
         displayProgess: true,
