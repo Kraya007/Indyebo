@@ -93,8 +93,10 @@
     var pluginName = 'pogoSlider';
 
     var defaults = {
-        autoplayTimeout: 4000,
-        autoplay: false,
+        
+  Timeout: 4000,
+        
+  : false,
         baseZindex: 1,
         displayProgess: true,
         onSlideStart: null,
@@ -182,7 +184,8 @@
                     transition: $(this).data('transition') || self.settings.slideTransition,
                     duration: parseInt($(this).data('duration')) || self.settings.slideTransitionDuration,
                     elementTransitionDuration: elementTransitionDuration,
-                    totalSlideDuration: self.settings.autoplayTimeout + elementTransitionDuration,
+                    totalSlideDuration: self.settings.
+  Timeout + elementTransitionDuration,
                     children: children
                 };
 
@@ -195,8 +198,10 @@
             // initialize the first slide
             self.slides[0].$element.css('opacity', 1);
 
-            // if autoplay set the corrext startTime and time remaining properties
-            if (self.settings.autoplay && self.settings.displayProgess) {
+            // if 
+   set the corrext startTime and time remaining properties
+            if (self.settings.
+   && self.settings.displayProgess) {
                 self._createProgessBar();
             }
 
@@ -242,8 +247,10 @@
 
             var self = this;
 
-            // start the slider if autoplay is true
-            if (self.settings.autoplay) {
+            // start the slider if 
+   is true
+            if (self.settings.
+  ) {
                 self.slideStartTime = new Date();
                 self.slideTimeRemaining = self.slides[0].totalSlideDuration;
                 self._slideTimeout(self.slideTimeRemaining);
@@ -449,7 +456,8 @@
         // public method to pause the slider
         pause: function () {
 
-            if (this.settings.autoplay) {
+            if (this.settings.
+  ) {
 
                 this.paused = true;
 
@@ -477,7 +485,8 @@
         // public method to resume the slider
         resume: function () {
 
-            if (this.settings.autoplay) {
+            if (this.settings.
+  ) {
 
                 this.paused = false;
                 this.slideStartTime = new Date();
@@ -576,7 +585,8 @@
         },
 
         // private method to change to the next slide
-        // used for the autoplay functionality
+        // used for the 
+   functionality
         _changeToNext: function () {
 
             this.prevSlideIndex = this.currentSlideIndex;
@@ -622,7 +632,8 @@
                 self._slideCleanup(prevSlideIndex, false);
                 self._slideElementCleanup(prevSlideIndex);
 
-                if (self.settings.autoplay) {
+                if (self.settings.
+  ) {
                     self._slideTimeout(self.slides[currentSlideIndex].totalSlideDuration);
                 }
 
@@ -637,7 +648,8 @@
 
             this.slides[slideIndex].$element.css('z-index', 1);
 
-            if (this.settings.autoplay) {
+            if (this.settings.
+  ) {
                 // need to set them regardless of whether it is paused or not
                 this.slideStartTime = new Date();
                 this.slideTimeRemaining = this.slides[slideIndex].totalSlideDuration;
@@ -679,7 +691,8 @@
 
             var timeElapsed;
 
-            if (this.settings.autoplay) {
+            if (this.settings.
+  ) {
                 if (this.settings.displayProgess) {
                     this.slides[slideIndex].$element.find('.pogoSlider-progressBar-duration').stop(true).css('width', '0');
                 }
